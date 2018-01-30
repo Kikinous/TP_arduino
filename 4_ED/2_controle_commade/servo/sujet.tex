@@ -1,0 +1,266 @@
+% vim:fdl=0:wrap
+\documentclass[a4paper, 11pt]{article}           %{{{1
+% basic packages                                  {{{2
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.975]{helvet}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{variations}
+\usepackage{pgf,tikz}           % dessin
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{pgfkeys}        % fenetrage des plot TikZ
+\usepackage{yhmath}         % arc au dessus des lettres
+\usepackage{calc}           % calcul de longueur
+\usepackage{variations}     % tableau de variations
+\usepackage{multicol}
+\usepackage{enumitem}
+% ==== PROGRAMMATION
+\usepackage{xcolor}                                                             %
+\usepackage{listings}                                                           %
+% listings                                        {{{3
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\lstset{%
+%       backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+        basicstyle=\footnotesize,          % the size of the fonts that are used for the code
+%       breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+%       breaklines=true,                 % sets automatic line breaking
+%       captionpos=b,                    % sets the caption-position to bottom
+        commentstyle=\color{mygreen},    % comment style
+%       deletekeywords={type},           % if you want to delete keywords from the given language
+%       emph={},                         % Custom highlighting
+%       emphstyle=\ttb\color{deepred}    % Custom highlighting style
+%       escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+%       extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+        frame=shadowbox,                 % adds a frame around the code {single, shadowbox}
+%       keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+        keywordstyle=\color{blue},       % keyword style
+	language=C,                      % the language of the code {Python, C}
+%       morekeywords={*,...},            % if you want to add more keywords to the set
+        numbers=left,                    % numbers = (none, left, right)
+%       numbersep=5pt,                   % how far the line-numbers are from the code
+%       numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+%       otherkeywords={self},            % Add keywords here
+%       rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	rulesepcolor=\color{gray}        % shadowbox color
+%       showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+%       showstringspaces=false,          % underline spaces within strings only
+%       showtabs=false,                  % show tabs within strings adding particular underscores
+%       stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+%       stringstyle=\color{mymauve},     % string literal style
+%       tabsize=4,                       % sets default tabsize to 2 spaces
+%       title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%}}}
+%}}}
+
+% mise en page                                    {{{2
+\addtolength{\voffset}{-1.8cm}
+\addtolength{\textheight}{4cm}
+\addtolength{\hoffset}{-2.5cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\headsep}{-0.5cm}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.00pt}
+\pagestyle{fancy} % Numérotation des pages
+\renewcommand\headrulewidth{1pt}
+\renewcommand\footrulewidth{1pt}
+\fancyhead[L]{BP SN}
+\fancyhead[C]{arduino}
+\fancyhead[R]{servomoteur}
+\fancyfoot[L]{v 1.2}
+\fancyfoot[C]{Electrodomestique | la commande des systèmes}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+%\lhead{3E}%haut de page gauche
+%}}}
+
+% Compteurs:                                     {{{2
+\addtocounter{page}{0}
+\newcounter{Q}
+\newcounter{exoNB}
+%}}}
+
+% newcommand                                     {{{2
+\newcommand{\question}{\stepcounter{Q} $\boxed{\arabic{Q}}$ }
+\newcommand{\ligne}{\underline{\hspace{ \textwidth}} }
+\newcommand{\reponse}{\vspace{2mm}\underline{\hspace{ \textwidth}} }
+\newcommand{\exo}[1]{\stepcounter{exoNB}\textsc{\Large Exercice \arabic{exoNB} -- #1} }
+\newcommand{\EXO}[2]{\stepcounter{exoNB}\textsc{\Large Exercice \arabic{exoNB} -- #1} \hfill \textbf{#2 points}}
+\newcommand{\pb}[1] {\stepcounter{exoNB}\textsc{\Large Problème \arabic{exoNB} -- #1} }
+\newcommand{\PB}[2] {\stepcounter{exoNB}\textsc{\Large Problème \arabic{exoNB} -- #1} \hfill \textbf{#2 points}}
+%}}}
+
+% Longueur:                                      {{{2
+\newlength{\longueurA}
+\newlength{\longueurB}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\renewcommand{\baselinestretch}{1}
+%}}}
+
+% Divers                                          {{{2
+% listings                                        {{{3
+%\definecolor{mygreen}{rgb}{0,0.6,0}
+%\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+%\definecolor{mymauve}{rgb}{0.58,0,0.82}
+%\definecolor{deepblue}{rgb}{0,0,0.5}
+%\definecolor{deepred}{rgb}{0.6,0,0}
+%\definecolor{deepgreen}{rgb}{0,0.5,0}
+%\lstset{%
+%        backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+%        basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+%        breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+%        breaklines=true,                 % sets automatic line breaking
+%        captionpos=b,                    % sets the caption-position to bottom
+%        commentstyle=\color{mygreen},    % comment style
+%        deletekeywords={...},            % if you want to delete keywords from the given language
+%        escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+%        extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+%        frame=single,                    % adds a frame around the code
+%        keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+%        keywordstyle=\color{blue},       % keyword style
+%        morekeywords={*,...},            % if you want to add more keywords to the set
+%        numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+%        numbersep=5pt,                   % how far the line-numbers are from the code
+%        numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+%        rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+%        showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+%        showstringspaces=false,          % underline spaces within strings only
+%        showtabs=false,                  % show tabs within strings adding particular underscores
+%        stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+%        stringstyle=\color{mymauve},     % string literal style
+%        tabsize=4,                       % sets default tabsize to 2 spaces
+%        title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+%}
+%\lstset{%
+%        language=Python,                 % the language of the code
+%        otherkeywords={self},            % Add keywords here
+%        deletekeywords={type},           % if you want to delete keywords from the given language
+%        emph={},                         % Custom highlighting
+%        emphstyle=\ttb\color{deepred}    % Custom highlighting style
+%}
+%}}}
+
+% PRL style line                                 {{{3
+\newlength{\diamondrulelength}
+\setlength{\diamondrulelength}{0.6\textwidth}
+\newlength{\diamondrulethickness}
+\setlength{\diamondrulethickness}{2pt}
+\newcommand{\diamondrule}{\begin{center}\tikz{\fill[black] (0.5\diamondrulelength,0) -- (0,0.5\diamondrulethickness) -- (-0.5\diamondrulelength,0) -- (0,-0.5\diamondrulethickness) -- cycle;}\end{center}}
+%}}}
+
+% fixed with tabular                             {{{3
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%}}}
+
+%}}}
+%}}}
+
+\begin{document}
+\sffamily
+
+% http://idehack.com/blog/utiliser-un-module-rfid-rc522-avec-larduino/
+% $3 dx.com SKU = 451518
+% 7 cables femelles -- males
+
+\begin{center}
+Nom:\underline{\hspace{4cm}} \hspace{4cm}Prénom:\underline{\hspace{4cm}}\\
+\ligne
+\end{center}
+
+\bigskip
+
+\textsc{\huge Ojectif : commande d'un servomoteur}\\
+Un servomoteur permet un contrôle précis de la position du servo. Il se compose d'un moteur couplé à un capteur de position pour contrôler / asservir de position. Il nécessite également une électronique de contrôleur relativement sophistiqué, une enceinte, un circuit imprimé et des engrenages. La carte Arduino peut contrôler le moteur de deux manières. Nous utilisons directement la fonction servo fournie avec Arduino pour contrôler le moteur.
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[height=\textwidth,angle=270]{cablage}
+\caption{Cablage à réaliser pour commander un servomoteur}
+\label{FigCablage}
+\end{center}
+\end{figure}
+
+
+\textsc{\huge Materiel} \\                      %{{{1
+\begin{minipage}{.65\textwidth} %
+\begin{multicols}{2}
+Arduino Board *1\\
+USB Cable *1\\
+Potentiometer*1 \\
+9G Servo Motor*1 \\
+Breadboard *1\\
+Breadboard Jumper Wires \\
+Male to Female Dupont Line\\
+\end{multicols}
+\end{minipage}
+\begin{minipage}{.25\textwidth} %
+\begin{center}
+\includegraphics[width=\textwidth]{servo}
+\end{center}
+\end{minipage}
+%}}}
+
+\textsc{\huge Materiel} \\                      %{{{1
+
+
+\begin{lstlisting}
+#include <Servo.h>
+//define steering engine variable
+Servo myservo;
+int servo =0;
+
+void setup() {
+  // 9600 bps
+  Serial.begin(9600);
+  //define steering engine interface
+  //(alternative 9 and 10 but just able to control 2 interfaces)
+  myservo.attach(9);
+}
+
+void loop() {
+  servo=map ( analogRead(0) , 0 , 1023 , 0 , 180 )  ;
+  Serial.println(servo ,DEC);
+  //set rotating angle
+  myservo.write(servo);
+  delay(50);
+}
+\end{lstlisting}
+
+\question Comment interprète le préprocesseur la commande \texttt{\#include} ? \\
+\reponse \\
+
+\question Que fait la commande \texttt{\#include <Servo.h>} ? \\
+\reponse \\
+
+\question Quelle la fréquence de répétition des impulsions enovyées au servo, en général ? \\
+\reponse \\
+
+\question Quelle la durée minimale, médiane et maximale des impulsions envoyées à un servomoteur, en général  ? \\
+\reponse \\
+
+\question Dessiner ci-dessous la forme des impulsions de tensions délivrées à un servo, en précisant la durée en impulsions, la durée d'une impulsion. Dessiner trois dessins : un pour la durée minimale correspondant au bras du servo moteur en fin de cours à gauche, un pour la durée médiane correspondant au bras du servo moteur au neutre, et un à la durée maximale correspondant au bras du servomoteur en fin de course à droite. \\[2cm]
+
+\question Dans le code source de \texttt{Servo.h} \footnote{https://github.com/esp8266/Arduino/blob/master/libraries/Servo/src/Servo.h}, quelles sont les valeurs que peuvent prendre au minimum et au maximum la durée des crénaux de tension ? \\
+\reponse \\
+
+
+\footnote{https://www.arduino.cc/en/Reference/Servo}
+
+
+%}}}
+
+\end{document}
+%vim:fdm=marker
+
+

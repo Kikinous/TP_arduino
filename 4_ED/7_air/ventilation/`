@@ -1,0 +1,311 @@
+\documentclass[a4paper, 11pt]{article}           %{{{1
+% basic packages                                 {{{2
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.975]{helvet}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}                                                           %
+% listings                                        {{{3
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\lstset{%
+%       backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+%       basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+%       breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+%       breaklines=true,                 % sets automatic line breaking
+%       captionpos=b,                    % sets the caption-position to bottom
+        commentstyle=\color{mygreen},    % comment style
+%       deletekeywords={type},           % if you want to delete keywords from the given language
+%       emph={},                         % Custom highlighting
+%       emphstyle=\ttb\color{deepred}    % Custom highlighting style
+%       escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+%       extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+        frame=shadowbox,                 % adds a frame around the code {single, shadowbox}
+%       keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+        keywordstyle=\color{blue},       % keyword style
+	language=C,                      % the language of the code {Python, C}
+%       morekeywords={*,...},            % if you want to add more keywords to the set
+        numbers=left,                    % numbers = (none, left, right)
+%       numbersep=5pt,                   % how far the line-numbers are from the code
+%       numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+%       otherkeywords={self},            % Add keywords here
+%       rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	rulesepcolor=\color{gray}        % shadowbox color
+%       showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+%       showstringspaces=false,          % underline spaces within strings only
+%       showtabs=false,                  % show tabs within strings adding particular underscores
+%       stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+%       stringstyle=\color{mymauve},     % string literal style
+%       tabsize=4,                       % sets default tabsize to 2 spaces
+%       title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+%}}}
+%}}}
+% mise en page                                   {{{2
+\addtolength{\voffset}{-1.8cm}
+\addtolength{\textheight}{4cm}
+\addtolength{\hoffset}{-2.5cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\headsep}{-0.5cm}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.00pt}
+\pagestyle{fancy} % Numérotation des pages
+\renewcommand\headrulewidth{1pt}
+\fancyhead[L]{2nd SN}
+\fancyhead[C]{Système de contrôle d'accès : signalisation}
+\fancyhead[R]{\textbf{Habitat intelligent}}
+\renewcommand\footrulewidth{1pt}
+\fancyfoot[L]{v 1.1}
+\fancyfoot[C]{2018}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+%\lhead{3E}%haut de page gauche
+%}}}
+% Compteurs:                                     {{{2
+\addtocounter{page}{0}
+\newcounter{Q}
+\newcounter{exoNB}
+%}}}
+% Longueur:                                      {{{2
+\newlength{\longueurA}
+\newlength{\longueurB}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\renewcommand{\baselinestretch}{1}
+%}}}
+% newcommand                                     {{{2
+\newcommand{\question}{\stepcounter{Q} $\boxed{\arabic{Q}}$ }
+\newcommand{\ligne}{\underline{\hspace{ \textwidth}} }
+\newcommand{\reponse}{\\\vspace{2mm}\underline{\hspace{ \textwidth}} }
+\newcommand{\exo}[1]{\stepcounter{exoNB}\textsc{\Large Exercice \arabic{exoNB} -- #1} }
+\newcommand{\EXO}[2]{\stepcounter{exoNB}\textsc{\Large Exercice \arabic{exoNB} -- #1} \hfill \textbf{#2 points}}
+\newcommand{\pb}[1] {\stepcounter{exoNB}\textsc{\Large Problème \arabic{exoNB} -- #1} }
+\newcommand{\PB}[2] {\stepcounter{exoNB}\textsc{\Large Problème \arabic{exoNB} -- #1} \hfill \textbf{#2 points}}
+%}}}
+% Divers                                         {{{2
+% PRL style line                                 {{{3
+\newlength{\diamondrulelength}
+\setlength{\diamondrulelength}{0.6\textwidth}
+\newlength{\diamondrulethickness}
+\setlength{\diamondrulethickness}{2pt}
+\newcommand{\diamondrule}{\begin{center}\tikz{\fill[black] (0.5\diamondrulelength,0) -- (0,0.5\diamondrulethickness) -- (-0.5\diamondrulelength,0) -- (0,-0.5\diamondrulethickness) -- cycle;}\end{center}}
+%}}}
+% fixed with tabular                             {{{3
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%}}}
+%}}}
+%}}}
+
+
+% http://wiki.keyestudio.com/index.php/Ks0080(81,_82)keyestudio_Maker_Learning_Kit_for_Arduino#Project_5:_Traffic_Light
+
+\begin{document}
+\sffamily
+
+
+\textsc{\huge Objectif: alimenter un moteur par un transistor et le contrôler automatiquement.}\\
+Ce sujet va vous apprendre à alimenter un moteur par une alimentation séparée de l'électronique de contrôle, ici un microcontrolleur. De plus, nous allons programmer ce microcontrolleur pour commander le moteur en fonction d'une mesure de la température.
+
+\bigskip
+
+
+\textsc{\Large Materiel}\\                       %{{{1
+Pour le montage du moteur alimenté par un transistor : \\
+- Arduino Board *1 \\
+- USB Cable *1 \\
+- TIP122 Triode*1  \\
+- 9V Battery *1  \\
+- 1 K$\Omega$ Resistor *1 \\
+- Fan Motor *1 \\
+- Fan Leaf *1 \\
+- Bread Board *1 \\
+- Breadboard Jumper Wires \\
+
+Pour le montage du capteur de température : \\
+- ??? \\
+- ??? \\
+- ??? \\
+- ??? \\
+- ??? \\
+- ??? \\
+- ??? \\
+
+%}}}
+
+
+\bigskip
+
+
+\textsc{\Large Cablage d'un moteur par un transistor bipolaire.}\\             %{{{1
+????????????????????????????\\
+\begin{figure}[b]
+\begin{center}
+\includegraphics[width=0.85\textwidth]{cablage_moteur}
+\caption{Alimentation du moteur par un transistor bipolaire.}
+\label{CablageMoteur}
+\end{center}
+\end{figure}
+
+\question Quel est le courant maximal que peut délivrer une broche du microcontrolleur ATMEGA328 de l'arduino UNO ?\\
+\reponse\\
+
+\question Quel est le courant maximal que peut supporter ce transistor TIP122, d'après la datasheet que vous pouvez trouver sur internet ? \\
+\reponse\\
+
+\question Réalisez le cablage de la figure \ref{CablageMoteur}, avec l'hélice sur le moteur.\\
+
+
+\question Impémenter le code suivant et résuméer d'une phrase le comportement observé.\\
+\begin{lstlisting}
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin 33 as an output.
+  pinMode(3, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(3, HIGH);   // turn the motor on (HIGH is the voltage level)
+  delay(2000);              // wait for 2 seconds
+  digitalWrite(3, LOW);    // turn the motor off by making the voltage LOW
+  delay(3000);              // wait for 3 second
+}
+\end{lstlisting}
+
+\question Décrie l'algorithme quasiment ligne à ligne.\\
+\reponse \\
+\reponse \\
+
+%}}}
+
+
+\bigskip
+
+
+\textsc{\Large Capteur de température}\\ %{{{1
+
+\stepcounter{Q}$\boxed{\arabic{Q}}$ Programmer un simple feu rouge avec un bouton.\\
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{LM35}
+\caption{LM35}
+\end{center}
+\end{figure}
+
+
+\begin{lstlisting}
+void setup() {
+  Serial.begin(9600);
+}
+void loop() {
+  int vol = analogRead(A0) * (5.0 / 1023.0*100); // read temperature value of LM35
+  Serial.print("Tep:");
+  Serial.print(vol);
+  Serial.println("C");
+  if (vol<22)                     	         // low temperature area and LED setup
+  {
+    Serial.println("Froid");
+  }
+  else (vol>=22 && )
+  {
+    Serial.println("Chaud");
+  }
+}
+\end{lstlisting}
+
+
+%}}}
+
+\end{document}
+
+\bigskip
+
+
+\textsc{\Large Deux feux rouges}\\               %{{{1
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{Arduino_Dual_Traffic_light}
+\caption{Cablage de deux feux rouges à une intersection}
+\label{cablage2feux}
+\end{center}
+\end{figure}
+%
+\question Pour l'exercice, implémentons des feux de croisement avec le séquencement qu'ils ont aux états-unis. Ce séquencement est précisé dans la figure \ref{sequenceUSA}. Décrire ce qui change par rapport aux feux rouges français.\\
+\reponse \\
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{trafficchartUSAJPG}
+\caption{sequencement des feux rouges aux états-unis. }
+\label{sequenceUSA}
+\end{center}
+\end{figure}
+%
+\question Implémenter ce code et le cablage de la figure \ref{cablage2feux}. \textbf{Constatation professeur :} \\
+\begin{lstlisting}
+int red1 = 10;
+int yellow1 = 9;
+int green1 = 8;
+int red2 = 13;
+int yellow2 = 12;
+int green2 = 11;
+
+void setup(){
+    pinMode(red1, OUTPUT);
+    pinMode(yellow1, OUTPUT);
+    pinMode(green1, OUTPUT);
+
+    pinMode(red2, OUTPUT);
+    pinMode(yellow2, OUTPUT);
+    pinMode(green2, OUTPUT);
+}
+
+void loop(){
+    changeLights();
+    delay(15000);
+}
+
+void changeLights(){
+    // turn both yellows on
+    digitalWrite(green1, LOW);
+    digitalWrite(yellow1, HIGH);
+    digitalWrite(yellow2, HIGH);
+    delay(5000);
+
+    // turn both yellows off, and opposite green and red
+    digitalWrite(yellow1, LOW);
+    digitalWrite(red1, HIGH);
+    digitalWrite(yellow2, LOW);
+    digitalWrite(red2, LOW);
+    digitalWrite(green2, HIGH);
+    delay(5000);
+
+    // both yellows on again
+    digitalWrite(yellow1, HIGH);
+    digitalWrite(yellow2, HIGH);
+    digitalWrite(green2, LOW);
+    delay(3000);
+
+    // turn both yellows off, and opposite green and red
+    digitalWrite(green1, HIGH);
+    digitalWrite(yellow1, LOW);
+    digitalWrite(red1, LOW);
+    digitalWrite(yellow2, LOW);
+    digitalWrite(red2, HIGH);
+    delay(5000);
+}
+\end{lstlisting}
+%}}}
+
+
+\end{document}
+
