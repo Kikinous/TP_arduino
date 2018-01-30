@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_2) (preloaded format=pdflatex 2017.10.25)  28 JAN 2018 21:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_2) (preloaded format=pdflatex 2017.10.25)  30 JAN 2018 14:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/julien/Desktop/PradeauLaSede/2sna/2.TP/arduino/0-bouton/sujet.tex
-(/Users/julien/Desktop/PradeauLaSede/2sna/2.TP/arduino/0-bouton/sujet.tex
+**sujet.tex
+(./sujet.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 46 language(s) loaded.
 (/opt/local/share/texmf-texlive/tex/latex/base/article.cls
@@ -444,13 +444,21 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-(/opt/local/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+(/opt/local/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+\fancy@headwidth=\skip46
+\f@ncyO@elh=\skip47
+\f@ncyO@erh=\skip48
+\f@ncyO@olh=\skip49
+\f@ncyO@orh=\skip50
+\f@ncyO@elf=\skip51
+\f@ncyO@erf=\skip52
+\f@ncyO@olf=\skip53
+\f@ncyO@orf=\skip54
 )
+(/opt/local/share/texmf-texlive/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2017/04/25 version 4.03 text color boxes
+
 (/opt/local/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
 (/opt/local/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
 (/opt/local/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
@@ -654,136 +662,55 @@ Package: pgfcomp-version-0-65 2007/07/03 v3.0.1 (rcs-revision 1.7)
 (/opt/local/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1 (rcs-revision 1.1)
 ))
-(/opt/local/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
-(/opt/local/share/texmf/tex/latex/pgf/utilities/pgffor.sty
-(/opt/local/share/texmf/tex/latex/pgf/utilities/pgfkeys.sty
-(/opt/local/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/opt/local/share/texmf/tex/latex/pgf/math/pgfmath.sty
-(/opt/local/share/texmf/tex/generic/pgf/math/pgfmath.code.tex))
-(/opt/local/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2013/12/13 v3.0.1 (rcs-revision 1.25)
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks32
+\verbatim@line=\toks33
+\verbatim@in@stream=\read2
+)
+(/opt/local/share/texmf-texlive/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
 
-(/opt/local/share/texmf/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen151
-\pgffor@skip=\dimen152
-\pgffor@stack=\toks32
-\pgffor@toks=\toks33
+(/opt/local/share/texmf-texlive/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-(/opt/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2015/08/07 v3.0.1 (rcs-revision 1.151)
-
-(/opt/local/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.t
-ex
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count110
-\pgfplotmarksize=\dimen153
+(/opt/local/share/texmf-texlive/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count110
 )
-\tikz@lastx=\dimen154
-\tikz@lasty=\dimen155
-\tikz@lastxsaved=\dimen156
-\tikz@lastysaved=\dimen157
-\tikzleveldistance=\dimen158
-\tikzsiblingdistance=\dimen159
-\tikz@figbox=\box35
-\tikz@figbox@bg=\box36
-\tikz@tempbox=\box37
-\tikz@tempbox@bg=\box38
-\tikztreelevel=\count111
-\tikznumberofchildren=\count112
-\tikznumberofcurrentchild=\count113
-\tikz@fig@count=\count114
- (/opt/local/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count115
-\pgfmatrixcurrentcolumn=\count116
-\pgf@matrix@numberofcolumns=\count117
-)
-\tikz@expandcount=\count118
-
-(/opt/local/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrar
-ytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1 (rcs-revision 1.2)
-))) (/opt/local/share/texmf-texlive/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count119
-\calc@Bcount=\count120
-\calc@Adimen=\dimen160
-\calc@Bdimen=\dimen161
-\calc@Askip=\skip46
-\calc@Bskip=\skip47
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count121
-\calc@Cskip=\skip48
-)
-(/opt/local/share/texmf-texlive/tex/latex/tools/multicol.sty
-Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count122
-\mult@box=\box39
-\multicol@leftmargin=\dimen162
-\c@unbalance=\count123
-\c@collectmore=\count124
-\doublecol@number=\count125
-\multicoltolerance=\count126
-\multicolpretolerance=\count127
-\full@width=\dimen163
-\page@free=\dimen164
-\premulticols=\dimen165
-\postmulticols=\dimen166
-\multicolsep=\skip49
-\multicolbaselineskip=\skip50
-\partial@page=\box40
-\last@line=\box41
-\maxbalancingoverflow=\dimen167
-\mult@rightbox=\box42
-\mult@grightbox=\box43
-\mult@gfirstbox=\box44
-\mult@firstbox=\box45
-\@tempa=\box46
-\@tempa=\box47
-\@tempa=\box48
-\@tempa=\box49
-\@tempa=\box50
-\@tempa=\box51
-\@tempa=\box52
-\@tempa=\box53
-\@tempa=\box54
-\@tempa=\box55
-\@tempa=\box56
-\@tempa=\box57
-\@tempa=\box58
-\@tempa=\box59
-\@tempa=\box60
-\@tempa=\box61
-\@tempa=\box62
-\c@columnbadness=\count128
-\c@finalcolumnbadness=\count129
-\last@try=\dimen168
-\multicolovershoot=\dimen169
-\multicolundershoot=\dimen170
-\mult@nat@firstbox=\box63
-\colbreak@box=\box64
-\mc@col@check@num=\count130
+\tcb@titlebox=\box35
+\tcb@upperbox=\box36
+\tcb@lowerbox=\box37
+\tcb@phantombox=\box38
+\c@tcbbreakpart=\count111
+\c@tcblayer=\count112
+\tcolorbox@number=\count113
+\tcb@temp=\box39
+\tcb@temp=\box40
+\tcb@temp=\box41
+\tcb@temp=\box42
+\tcb@out=\write4
+\tcb@record@out=\write5
 )
 (/opt/local/share/texmf-texlive/tex/latex/listings/listings.sty
-\lst@mode=\count131
-\lst@gtempboxa=\box65
+\lst@mode=\count114
+\lst@gtempboxa=\box43
 \lst@token=\toks34
-\lst@length=\count132
-\lst@currlwidth=\dimen171
-\lst@column=\count133
-\lst@pos=\count134
-\lst@lostspace=\dimen172
-\lst@width=\dimen173
-\lst@newlines=\count135
-\lst@lineno=\count136
-\lst@maxwidth=\dimen174
+\lst@length=\count115
+\lst@currlwidth=\dimen151
+\lst@column=\count116
+\lst@pos=\count117
+\lst@lostspace=\dimen152
+\lst@width=\dimen153
+\lst@newlines=\count118
+\lst@lineno=\count119
+\lst@maxwidth=\dimen154
 
 (/opt/local/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count137
-\lst@skipnumbers=\count138
-\lst@framebox=\box66
+\c@lstnumber=\count120
+\lst@skipnumbers=\count121
+\lst@framebox=\box44
 )
 (/opt/local/share/texmf-texlive/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -796,63 +723,51 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/opt/local/share/texmf-texlive/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-(/opt/local/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
-\fancy@headwidth=\skip51
-\f@ncyO@elh=\skip52
-\f@ncyO@erh=\skip53
-\f@ncyO@olh=\skip54
-\f@ncyO@orh=\skip55
-\f@ncyO@elf=\skip56
-\f@ncyO@erf=\skip57
-\f@ncyO@olf=\skip58
-\f@ncyO@orf=\skip59
-)
-\c@Q=\count139
-\c@exoNB=\count140
-\longueurA=\skip60
-\longueurB=\skip61
-\diamondrulelength=\skip62
-\diamondrulethickness=\skip63
+\c@Q=\count122
+\c@exoNB=\count123
+\longueurA=\skip55
+\longueurB=\skip56
+\diamondrulelength=\skip57
+\diamondrulethickness=\skip58
 
 (/opt/local/share/texmf-texlive/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen175
-\extrarowheight=\dimen176
+\col@sep=\dimen155
+\extrarowheight=\dimen156
 \NC@list=\toks35
-\extratabsurround=\skip64
-\backup@length=\skip65
+\extratabsurround=\skip59
+\backup@length=\skip60
 ) (./sujet.aux)
 \openout1 = `sujet.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 169.
-LaTeX Font Info:    ... okay on input line 169.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 167.
+LaTeX Font Info:    ... okay on input line 167.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 169.
+(lastpage)             ! on input line 167.
 
 (/opt/local/share/texmf-texlive/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count141
-\scratchdimen=\dimen177
-\scratchbox=\box67
-\nofMPsegments=\count142
-\nofMParguments=\count143
+\scratchcounter=\count124
+\scratchdimen=\dimen157
+\scratchbox=\box45
+\nofMPsegments=\count125
+\nofMParguments=\count126
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count144
-\MPscratchDim=\dimen178
-\MPnumerator=\count145
-\makeMPintoPDFobject=\count146
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen158
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
 \everyMPtoPDFconversion=\toks37
 ) (/opt/local/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
@@ -904,56 +819,153 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\c@lstlisting=\count147
-LaTeX Font Info:    Try loading font information for T1+phv on input line 170.
+\c@lstlisting=\count130
+LaTeX Font Info:    Try loading font information for T1+phv on input line 168.
 
 (/opt/local/share/texmf-texlive/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.6763pt on input line 168.
+LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
 (Font)              scaled to size 10.6763pt on input line 170.
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 10.6763pt on input line 172.
-LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 20.22162pt on input line 172.
+(Font)              scaled to size 20.22162pt on input line 170.
 LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/sc' tried instead on input line 172.
+(Font)              Font shape `T1/phv/b/sc' tried instead on input line 170.
 LaTeX Font Info:    Font shape `T1/phv/b/sc' will be
-(Font)              scaled to size 20.22162pt on input line 172.
+(Font)              scaled to size 20.22162pt on input line 170.
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
-(Font)              scaled to size 14.04007pt on input line 176.
+(Font)              scaled to size 14.04007pt on input line 174.
 
-! LaTeX Error: File `CablageBouton' not found.
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.196 ...hics[width=0.75\textwidth]{CablageBouton}
-                                                  \\
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.196 ...hics[width=0.75\textwidth]{CablageBouton}
-                                                  \\
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
 
- 
+
+Overfull \hbox (3.51288pt too wide) in paragraph at lines 188--189
+[]\T1/phv/m/n/10.95 Le mi-cro-con-trôleur peut être pro-grammé pour anal-yser e
+t pro-duire des sig-naux élec-triques, de manière
+ []
+
+<CarteArduinoSimplifiee.png, id=4, 344.03531pt x 245.41687pt>
+File: CarteArduinoSimplifiee.png Graphic file (type png)
+
+<use CarteArduinoSimplifiee.png>
+Package pdftex.def Info: CarteArduinoSimplifiee.png used on input line 195.
+(pdftex.def)             Requested size: 402.74225pt x 287.29759pt.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 203.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.6763pt on input line 203.
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--212
+
+ []
+
+[1{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+ <./CarteArduinoSimplifiee.png>] <UNOV3PDF.png, id=15, 844.5954pt x 597.432pt>
+File: UNOV3PDF.png Graphic file (type png)
+
+<use UNOV3PDF.png>
+Package pdftex.def Info: UNOV3PDF.png used on input line 216.
+(pdftex.def)             Requested size: 844.59334pt x 597.43054pt.
+
+Overfull \hbox (0.72453pt too wide) in paragraph at lines 226--227
+[]\T1/phv/m/sc/14.4 Familiarisation avec les spé-ci-fi-ca-tions tech-niques de 
+la carte UNO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+
+ []
+
+
+Overfull \hbox (0.64908pt too wide) in paragraph at lines 244--246
+[]$[]$ \T1/phv/m/n/10.95 Qu'elles soient sur la même carte élec-tron-ique ou no
+n, les puces élec-tron-iques peu-vent s'échanger
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 254.
+
+(/opt/local/share/texmf-texlive/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (0.51831pt too wide) in paragraph at lines 254--255
+[]$[]$ \T1/phv/m/n/10.95 In-staller l'environnement de développe-ment ar-duino 
+depuis \T1/cmtt/m/n/10.95 www.arduino.cc\T1/phv/m/n/10.95 . Ou-vrir le pro-gram
+me
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
+
+ []
+
+[2] [3 <./UNOV3PDF.png>]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.77505pt on input line 264.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 326--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+
+ []
+
+<CablageLED.png, id=31, 752.8125pt x 1123.94907pt>
+File: CablageLED.png Graphic file (type png)
+ <use CablageLED.png>
+Package pdftex.def Info: CablageLED.png used on input line 342.
+(pdftex.def)             Requested size: 317.35075pt x 473.81102pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 385--389
+
+ []
+
+
+AED: lastpage setting LastPage
+[6 <./CablageLED.png>] (./sujet.aux) ) 
 Here is how much of TeX's memory you used:
- 14381 strings out of 494108
- 269053 string characters out of 6155654
- 322528 words of memory out of 5000000
- 17477 multiletter control sequences out of 15000+600000
- 22464 words of font info for 21 fonts, out of 8000000 for 9000
+ 14142 strings out of 494108
+ 259381 string characters out of 6155654
+ 332520 words of memory out of 5000000
+ 17246 multiletter control sequences out of 15000+600000
+ 43134 words of font info for 52 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 48i,4n,54p,496b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 54i,12n,73p,889b,1138s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/opt/local/share/texmf-texlive/fonts/enc
+/dvips/cm-super/cm-super-t1.enc}{/opt/local/share/texmf-texlive/fonts/enc/dvips
+/base/8r.enc}</opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/cm-super/sfrm0600.pfb
+></opt/local/share/texmf-texlive/fonts/type1/public/cm-super/sfrm0800.pfb></opt
+/local/share/texmf-texlive/fonts/type1/public/cm-super/sfrm0900.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/cm-super/sfrm1095.pfb></opt/local/share
+/texmf-texlive/fonts/type1/public/cm-super/sftt1095.pfb></opt/local/share/texmf
+-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/local/share/texmf-texlive/fo
+nts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on sujet.pdf (6 pages, 1217931 bytes).
+PDF statistics:
+ 67 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+
