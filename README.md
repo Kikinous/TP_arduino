@@ -1,4 +1,4 @@
 # TP_arduino
 
-Sujet 1 : blink
-Sujet 2 : led et boutons
+1. Sujet 1 : blink
+1. Sujet 2 : led et boutons
