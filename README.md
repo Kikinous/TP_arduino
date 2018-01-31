@@ -25,5 +25,5 @@ S 6.4 Les systèmes électroniques industriels embarqués : les équipements
 *S 4.7 Les systèmes électrodomestiques : Les équipements de traitement de l'air.*
 *S 7 Les systèmes domotiques liés au confort et à la gestion de l'énergie.*
 
-1. Servomoteur
+1. Servomoteur\
 S 1.1.5 Les systèmes de gestion des ouvrants
