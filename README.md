@@ -9,7 +9,7 @@ S 6.4 Les systèmes électroniques industriels embarqués : les équipements
 *S 1.1.1 Les systèmes de gestion de l'habitat intelligent : les systèmes de détection intrusion.*
 
 1. RFID\
-*S 0.3 Systèmes électroniques d'alarme, de sûreté, de sécurité et d'incendie dans les infrastructures industrielles et urbaines :  les systèmes de sécurité incendie -- les système de contrôle d'accès.*
+*S 0.3 Systèmes électroniques d'alarme, de sûreté, de sécurité et d'incendie dans les infrastructures industrielles et urbaines :  les systèmes de sécurité incendie -- les systèmes de contrôle d'accès.*
 
 1. Détecteur de flamme et buzzer\
 *S 1.1.1 Les systèmes de gestion de l'habitat intelligent : les systèmes de détection d'incendie et de gaz.*
