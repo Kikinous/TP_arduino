@@ -122,7 +122,7 @@
 \hfill Nom : {\noindent\makebox[5cm]{\dotfill}\endgraf}
 \objectif{Alimenter un moteur par un transistor et le contrôler automatiquement.}
 
-Ce sujet va vous apprendre à alimenter un moteur par une alimentation séparée de l'électronique de commande, ici et comme souvent le microcontrolleur. De plus, nous allons programmer ce microcontrolleur pour commander le moteur en fonction d'une mesure de la température. L'idée est que nous allons ventiller quand il fait chaud.
+Ce sujet aborde l'électronique de commande d'un circuit électrique de puissance. Une partie du circuit supporte de grosse puissance électrique. Une autre partie consomme peu de puissance électrique mais permet la programmation. De plus, nous allons programmer ce microcontrolleur pour commander le moteur en fonction d'une mesure de la température. L'idée est que nous allons ventiller quand il fait chaud.
 
 \bigskip
 
@@ -154,19 +154,19 @@ Pour le montage du moteur alimenté par un transistor :
 \end{center}
 \end{figure}
 
-Comme nous allons le voir, le moteur ne peut pas être directement alimenté par le microcontrolleur. Nous allons donc utiliser un transistor fonctionnant en mode interrupteur. Nous aurions pu utiliser utiliser un relais. L'alimentation sera fournie par une batterie externe de quelques volts. Si des batteries ne sont pas disponibles, nous brancherons le moteur sur la sortie 3.3V du microcontrolleur et nous risquerons de griller soit le regulateur 3.3V de la carte, soit le port USB qui alimente toute la carte en 5V, dont le regulateur 3.3V qui fournit donc les 3.3V. En fait, il y a des chances que le regulateur soit protégé en température : il s'éteind quand il est trop chaud. Il y aussi des chances que le port USB de l'ordinateur se coupe si des courants trop importants sont demandés.
+Comme nous allons le voir, le moteur ne peut pas être directement alimenté par le microcontrolleur. Nous allons donc utiliser un transistor fonctionnant en mode interrupteur. Nous aurions pu utiliser utiliser un relais. L'alimentation sera fournie par une batterie externe de quelques volts. Si des batteries ne sont pas disponibles, nous brancherons le moteur sur la sortie 3.3V du microcontrolleur et nous risquerons de griller soit le regulateur 3.3V de la carte, soit le port USB qui alimente toute la carte en 5V, dont le regulateur 3.3V qui fournit donc les 3.3V. En fait, il y a des chances que le regulateur soit protégé en température : il s'éteint quand il est trop chaud. Il y aussi des chances que le port USB de l'ordinateur se coupe si des courants trop importants sont demandés.
 
-\question Quel est le courant maximal que peut délivrer une sortie  ATMEGA328 de la carte UNO ?
+\question Quel est le courant maximal que peut délivrer une sortie de l'ATMEGA328 de la carte UNO ?
 \reponse
 
 \question Quel est le courant maximal que peut supporter ce transistor TIP122, d'après la datasheet que vous pouvez trouver sur internet ?
 \reponse
 
-\question Lire la datasheet du regulateur de la carte UNO et spécifier d'une part son courant de sortie maximal, et d'atre part son mode de protection.
+\question Lire la datasheet du regulateur 5V de la carte UNO et spécifier d'une part son courant de sortie maximal, et d'autre part son mode de protection.
 \reponse
 \reponse
 
-\question Trouver le courant maximal que peut débiter le port USB de votre ordinateur et préciser son mode de protection
+\question Trouver le courant maximal que peut débiter le port USB de votre ordinateur et préciser son mode de protection.
 \reponse
 
 \question Réalisez le cablage de la figure \ref{CablageMoteur}, avec l'hélice sur le moteur. Alimentez le transistor et donc le moteur comme décrit en introduction à cette partie.
@@ -199,10 +199,10 @@ void loop() {
 \question Dans un moteur à courant continu, quelle relation simple lie le courant et le couple ?
 \reponse
 
-\question Dans un moteur à courant continu, en gros, quelle est la relation entre  la vitesse de rotation et la tension ?
+\question Dans un moteur à courant continu, si on néglige la résistance du moteur, quelle est la relation entre la vitesse de rotation et la tension ?
 \reponse
 
-\question Maintenant, plus exactement, quelle est la relation qui lie la tension appliquée au courant, à la résistance du moteur et la force contre-électromotrice ?\footnote{voir wikipedia par exemple}
+\question Maintenant, la résistance du moteur n'est plus négligée. Quelle est la relation entre la tension appliquée, le courant circulant dans le moteur, la résistance du moteur et la force contre-électromotrice ?\footnote{voir wikipedia par exemple}
 \reponse
 
 \question Si l'hélice devient plus grande, comment varie le courant à vitesse de rotation constante ?
@@ -323,7 +323,7 @@ void loop() {
 }
 \end{lstlisting}
 
-\question Branchez l'entrée A0 au LM35, puis donnez la valeur lue à la console série arduino. Combien mesure un voltmètre entre la masse et la broche Vout du LM35, celle qui est évidemment branchée à l'entrée A0.
+\question Branchez l'entrée A0 au LM35, puis donnez la valeur lue à la console série arduino. Combien mesure un voltmètre entre la masse et la broche Vout du LM35 (celle qui est évidemment branchée à l'entrée A0).
 \reponse
 
 \question Dans la figure \ref{LM35}, quelle est l'augmentation en mV de la sortie Vout pour une augmentation de 1 degré celcius ?  
