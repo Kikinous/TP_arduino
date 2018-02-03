@@ -182,10 +182,10 @@
 
 \objectif{Détection de flamme et alarme}
 
-Le détecteur de flamme (triode de réception infrarouge) peut être utilisé sur des robots pour trouver la source d'incendie. Ce capteur a une sensibilité élevée à la flamme. Voici une photo dans la figure 1
+Le détecteur de flamme (diode de réception infrarouge) peut être utilisé sur des robots pour trouver la source d'incendie. Ce capteur a une sensibilité élevée à la flamme. Sa photo est dans la figure 1.
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=.5\textwidth]{detecteur_flamme}
+\includegraphics[width=.65\textwidth]{detecteur_flamme}
 \includegraphics[width=.3\textwidth]{DiodeCircuit}
 \label{FigDiodeFlamme}
 \caption{Diode infrarouge détectrice de flamme}
@@ -228,24 +228,36 @@ Donc, au début du programme, vous pouvez initialiser la valeur de tension i (pa
 
 \question Réalisez le montage.
 
+\question Est-ce que la diode est un composant passif ou actif ?
+\reponse
+
 \question Avec un multimètre, mesurez la valeur du potentiel du fil branché à A0 sans flamme ?  \footnote{la masse du multimètre est référencée à celle de la carte arduino}
 \reponse
 
 \question Quelle est la valeur de ce potentiel en présence de flamme ?
 \reponse
 
+\question Comment est-ce que le microcontrolleur peut il donc détecter la présence de flamme pour faire sonner le buzzer ?
+\reponse
+
 \question Quelle est sa valeur lorsque la flamme est très proche (soyons raisonable) ?
 \reponse
 
-\question Réprennez les deux questions précédentes avec une résistance de 5k$\Omega$ et répondez-y ci après. Donnez donc trois valeurs de tension.
+\question Réprennez les questions 3 et 4 avec une résistance de 5k$\Omega$ et répondezy ci-après. Donnez donc trois valeurs de tension.
 \reponse
 \reponse
 \reponse
+
+\tcbox{\textbf{Constatation professeur :} \hspace{5cm} } % package tcolorbox
 
 \question Expliquez le principe à l'origine de ce changement.
 \reponse
 
-\question Quel est la différence entre un buzzer actif et passif ?
+\question Trouvez sur internet un produit où cette diode est montée dans une carte d'évaluation, ou breakout board en anglais. Est ce que l'utilisation d'une telle carte nous éviterait de calculer et optimiser le choix de la résistance discutée dans les questions précédentes.
+\reponse
+
+
+\question Quel est la différence entre un buzzer actif et un buzzer passif ?
 \reponse
 
 \question Vérifiez le bon fonctionnement du buzzer actif en le polarisant avec 5V.
