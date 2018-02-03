@@ -29,35 +29,35 @@
 \definecolor{deepred}{rgb}{0.6,0,0}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 \lstset{%
-%       backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
-        basicstyle=\footnotesize,          % the size of the fonts that are used for the code
-%       breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-%       breaklines=true,                 % sets automatic line breaking
-%       captionpos=b,                    % sets the caption-position to bottom
-        commentstyle=\color{mygreen},    % comment style
-%       deletekeywords={type},           % if you want to delete keywords from the given language
-%       emph={},                         % Custom highlighting
-%       emphstyle=\ttb\color{deepred}    % Custom highlighting style
-%       escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-%       extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-        frame=shadowbox,                 % adds a frame around the code {single, shadowbox}
-%       keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-        keywordstyle=\color{blue},       % keyword style
-	language=C,                      % the language of the code {Python, C}
-%       morekeywords={*,...},            % if you want to add more keywords to the set
-        numbers=left,                    % numbers = (none, left, right)
-%       numbersep=5pt,                   % how far the line-numbers are from the code
-%       numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
-%       otherkeywords={self},            % Add keywords here
-%       rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-	rulesepcolor=\color{gray}        % shadowbox color
-%       showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-%       showstringspaces=false,          % underline spaces within strings only
-%       showtabs=false,                  % show tabs within strings adding particular underscores
-%       stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
-%       stringstyle=\color{mymauve},     % string literal style
-%       tabsize=4,                       % sets default tabsize to 2 spaces
-%       title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+% backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,          % the size of the fonts that are used for the code
+% breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+% breaklines=true,                 % sets automatic line breaking
+% captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+% deletekeywords={type},           % if you want to delete keywords from the given language
+% emph={},                         % Custom highlighting
+% emphstyle=\ttb\color{deepred}    % Custom highlighting style
+% escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+% extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=shadowbox,                 % adds a frame around the code {single, shadowbox}
+% keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C,                      % the language of the code {Python, C}
+% morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % numbers = (none, left, right)
+% numbersep=5pt,                   % how far the line-numbers are from the code
+% numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+% otherkeywords={self},            % Add keywords here
+% rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  rulesepcolor=\color{gray}        % shadowbox color
+% showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+% showstringspaces=false,          % underline spaces within strings only
+% showtabs=false,                  % show tabs within strings adding particular underscores
+% stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+% stringstyle=\color{mymauve},     % string literal style
+% tabsize=4,                       % sets default tabsize to 2 spaces
+% title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 %}}}
 %}}}
@@ -89,13 +89,21 @@
 %}}}
 
 % newcommand                                     {{{2
-\newcommand{\question}{\stepcounter{Q} $\boxed{\arabic{Q}}$ }
+\newcommand{\partie}[1]{\textsc{\Large #1} }
+\newcommand{\objectif}[1]{\textsc{\huge \textbf{Objectif :}\\[2mm] #1} }
 \newcommand{\ligne}{\underline{\hspace{ \textwidth}} }
-\newcommand{\reponse}{\vspace{2mm}\underline{\hspace{ \textwidth}} }
 \newcommand{\exo}[1]{\stepcounter{exoNB}\textsc{\Large Exercice \arabic{exoNB} -- #1} }
 \newcommand{\EXO}[2]{\stepcounter{exoNB}\textsc{\Large Exercice \arabic{exoNB} -- #1} \hfill \textbf{#2 points}}
 \newcommand{\pb}[1] {\stepcounter{exoNB}\textsc{\Large Problème \arabic{exoNB} -- #1} }
 \newcommand{\PB}[2] {\stepcounter{exoNB}\textsc{\Large Problème \arabic{exoNB} -- #1} \hfill \textbf{#2 points}}
+
+\newcommand{\question}{\stepcounter{Q} $\boxed{\arabic{Q}}$ }
+\newcommand{\reponse}{
+\par\nobreak
+\noindent\rule{0pt}{1.5\baselineskip}% Provides a larger gap between the preceding paragraph and the dots
+{\noindent\makebox[\linewidth]{\dotfill}\endgraf}% ... dotted lines ...
+% \bigskip% Gap between dots and next paragraph
+}
 %}}}
 
 % Longueur:                                      {{{2
@@ -174,15 +182,10 @@
 % $3 dx.com SKU = 451518
 % 7 cables femelles -- males
 
-\begin{center}
-Nom:\underline{\hspace{4cm}} \hspace{4cm}Prénom:\underline{\hspace{4cm}}\\
-\ligne
-\end{center}
+\hfill Nom : {\noindent\makebox[5cm]{\dotfill}\endgraf}
 
-\bigskip
-
-\textsc{\huge Ojectif : commande d'un servomoteur}\\
-Un servomoteur permet un contrôle précis de la position du servo. Il se compose d'un moteur couplé à un capteur de position pour contrôler / asservir de position. Il nécessite également une électronique de contrôleur relativement sophistiqué, une enceinte, un circuit imprimé et des engrenages. La carte Arduino peut contrôler le moteur de deux manières. Nous utilisons directement la fonction servo fournie avec Arduino pour contrôler le moteur.
+\objectif{commande d'un servomoteur}\\ %{{{1
+Un servomoteur permet un contrôle précis de la position du servo. Il se compose d'un moteur couplé à un capteur de position pour contrôler / asservir la position du bras du servo. Il nécessite également une électronique de contrôle relativement sophistiqué, une enceinte, un circuit imprimé et des engrenages. La carte Arduino peut contrôler le moteur de deux manières. Ici, nous utilisons directement la fonction servo fournie avec Arduino pour contrôler le moteur.
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[height=\textwidth,angle=270]{cablage}
@@ -191,8 +194,10 @@ Un servomoteur permet un contrôle précis de la position du servo. Il se compos
 \end{center}
 \end{figure}
 
+%}}}
 
-\textsc{\huge Materiel} \\                      %{{{1
+
+\partie{Materiel} \\                      %{{{1
 \begin{minipage}{.65\textwidth} %
 \begin{multicols}{2}
 Arduino Board *1\\
@@ -211,9 +216,7 @@ Male to Female Dupont Line\\
 \end{minipage}
 %}}}
 
-\textsc{\huge Materiel} \\                      %{{{1
-
-
+\partie{Commande du servomoteur} %{{{1
 \begin{lstlisting}
 #include <Servo.h>
 //define steering engine variable
@@ -237,25 +240,33 @@ void loop() {
 }
 \end{lstlisting}
 
-\question Comment interprète le préprocesseur la commande \texttt{\#include} ? \\
-\reponse \\
+\question Comment interprète le préprocesseur la commande \texttt{\#include} ?
+\reponse
 
-\question Que fait la commande \texttt{\#include <Servo.h>} ? \\
-\reponse \\
+\question Que fait la commande \texttt{\#include <Servo.h>} ?
+\reponse
 
-\question Quelle la fréquence de répétition des impulsions enovyées au servo, en général ? \\
-\reponse \\
+\question Quelles est la fréquence (de répétition) des impulsions envoyées au servo, en général ?
+\reponse
 
-\question Quelle la durée minimale, médiane et maximale des impulsions envoyées à un servomoteur, en général  ? \\
-\reponse \\
+\question Quelles est la fréquence des impulsions envoyées au servo ici ?
+\reponse
 
-\question Dessiner ci-dessous la forme des impulsions de tensions délivrées à un servo, en précisant la durée en impulsions, la durée d'une impulsion. Dessiner trois dessins : un pour la durée minimale correspondant au bras du servo moteur en fin de cours à gauche, un pour la durée médiane correspondant au bras du servo moteur au neutre, et un à la durée maximale correspondant au bras du servomoteur en fin de course à droite. \\[2cm]
+\question Quelles sont les durées minimales, médianes et maximales des impulsions envoyées à un servomoteur, en général  ?
+\reponse
 
-\question Dans le code source de \texttt{Servo.h} \footnote{https://github.com/esp8266/Arduino/blob/master/libraries/Servo/src/Servo.h}, quelles sont les valeurs que peuvent prendre au minimum et au maximum la durée des crénaux de tension ? \\
-\reponse \\
+\question Quelles sont les durées minimales, médianes et maximales des impulsions envoyées au servomoteur ?
+\reponse
+
+\question Dessiner ci-dessous 3 dessins de la forme des impulsions de tensions envoyées à un servo en précisant d'une part la durée entre le début de deux impulsions, et d'autre part la durée d'une impulsion.  Les trois dessins représentent : (i) la durée minimale d'impulsion correspondant au bras du servo moteur en fin de cours à gauche, (iii) la durée moyenne correspondant au bras du servo moteur au neutre et (iii)la durée maximale correspondant au bras du servomoteur en fin de course à droite.
+
+\vspace{2.8cm}
+
+\question Dans le code source de \texttt{Servo.h} \footnote{https://github.com/esp8266/Arduino/blob/master/libraries/Servo/src/Servo.h}, quelles sont les valeurs que peuvent prendre au minimum et au maximum la durée des crénaux de tension ?\footnote{https://www.arduino.cc/en/Reference/Servo}
+\reponse
 
 
-\footnote{https://www.arduino.cc/en/Reference/Servo}
+
 
 
 %}}}
