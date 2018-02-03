@@ -29,35 +29,35 @@
 \definecolor{deepred}{rgb}{0.6,0,0}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 \lstset{%
-%       backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
-        basicstyle=\footnotesize,          % the size of the fonts that are used for the code
-%       breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-%       breaklines=true,                 % sets automatic line breaking
-%       captionpos=b,                    % sets the caption-position to bottom
-        commentstyle=\color{mygreen},    % comment style
-%       deletekeywords={type},           % if you want to delete keywords from the given language
-%       emph={},                         % Custom highlighting
-%       emphstyle=\ttb\color{deepred}    % Custom highlighting style
-%       escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-%       extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-        frame=shadowbox,                 % adds a frame around the code {single, shadowbox}
-%       keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-        keywordstyle=\color{blue},       % keyword style
-	language=C,                      % the language of the code {Python, C}
-%       morekeywords={*,...},            % if you want to add more keywords to the set
-        numbers=left,                    % numbers = (none, left, right)
-%       numbersep=5pt,                   % how far the line-numbers are from the code
-%       numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
-%       otherkeywords={self},            % Add keywords here
-%       rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-	rulesepcolor=\color{gray}        % shadowbox color
-%       showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-%       showstringspaces=false,          % underline spaces within strings only
-%       showtabs=false,                  % show tabs within strings adding particular underscores
-%       stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
-%       stringstyle=\color{mymauve},     % string literal style
-%       tabsize=4,                       % sets default tabsize to 2 spaces
-%       title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+% backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,          % the size of the fonts that are used for the code
+% breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+% breaklines=true,                 % sets automatic line breaking
+% captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+% deletekeywords={type},           % if you want to delete keywords from the given language
+% emph={},                         % Custom highlighting
+% emphstyle=\ttb\color{deepred}    % Custom highlighting style
+% escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+% extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=shadowbox,                 % adds a frame around the code {single, shadowbox}
+% keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C,                      % the language of the code {Python, C}
+% morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % numbers = (none, left, right)
+% numbersep=5pt,                   % how far the line-numbers are from the code
+% numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+% otherkeywords={self},            % Add keywords here
+% rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  rulesepcolor=\color{gray}        % shadowbox color
+% showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+% showstringspaces=false,          % underline spaces within strings only
+% showtabs=false,                  % show tabs within strings adding particular underscores
+% stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+% stringstyle=\color{mymauve},     % string literal style
+% tabsize=4,                       % sets default tabsize to 2 spaces
+% title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 %}}}
 %}}}
@@ -76,7 +76,7 @@
 \fancyhead[L]{BP SN}
 \fancyhead[C]{arduino}
 \fancyhead[R]{détecteur de flamme et buzzer}
-\fancyfoot[L]{v 1.5 -- JB}
+\fancyfoot[L]{v 1.6 -- JB}
 \fancyfoot[C]{gestion de l'habitat | detection et sécurité incendie}
 \fancyfoot[R]{\thepage/\pageref{LastPage}}
 %\lhead{3E}%haut de page gauche
@@ -182,14 +182,14 @@
 
 \objectif{Détection de flamme et alarme}
 
-Le détecteur de flamme (triode de réception infrarouge) est spécialement utilisé sur les robots pour trouver la source d'incendie. Ce capteur a une sensibilité élevée à la flamme. Voici une photo dans la figure \ref{FigDiodeFlamme}.
+Le détecteur de flamme (triode de réception infrarouge) peut être utilisé sur des robots pour trouver la source d'incendie. Ce capteur a une sensibilité élevée à la flamme. Voici une photo dans la figure 1
 \begin{figure}[!h]
-	\begin{center}
-		\includegraphics[width=.5\textwidth]{detecteur_flamme}
-		\includegraphics[width=.3\textwidth]{DiodeCircuit}
-		\caption{Diode infrarouge détectrice de flamme}
-		\label{FigDiodeFlamme}
-	\end{center}
+\begin{center}
+\includegraphics[width=.5\textwidth]{detecteur_flamme}
+\includegraphics[width=.3\textwidth]{DiodeCircuit}
+\label{FigDiodeFlamme}
+\caption{Diode infrarouge détectrice de flamme}
+\end{center}
 \end{figure}
 
 
@@ -197,17 +197,17 @@ Principe de fonctionnement:\\
 Le détecteur de flamme est basé sur le principe selon lequel les rayons infrarouges sont très sensibles aux flammes. Il dispose d'un tube de réception infrarouge spécial conçu pour détecter le feu, puis convertir la luminosité de la flamme en un signal de niveau fluctuant. Les signaux sont ensuite introduits dans le processeur central et traités en conséquence.\\
 
 Connexion du capteur:\\
-La broche la plus courte de la diode réceptrice est négative, l'autre positive. Connectez la négative à la broche 5V, positive à la résistance. Connectez l'autre extrémité de la résistance à la masse. Connectez l'extrémité de la diode à la broche analogique A0, comme indiqué sur la figure \ref{FigDiodeFlamme}.\\
+La broche la plus courte de la diode réceptrice est négative, l'autre positive. Connectez la négative à la broche 5V, positive à la résistance. Connectez l'autre extrémité de la résistance à la masse. Connectez l'extrémité de la diode à la broche analogique A0, comme indiqué sur la figure 1.\\
 
 
 \partie{Materiel}                         %{{{1
 \begin{multicols}{2}
-	Arduino Board *1\\
-	USB Cable *1\\
-	Flame Sensor *1 \\
-	Active Buzzer*1\\
-	10K$\Omega$ Resistor*1\\
-	Breadboard Jumper Wires\\
+Arduino Board *1\\
+USB Cable *1\\
+Flame Sensor *1 \\
+Active Buzzer*1\\
+10K$\Omega$ Resistor*1\\
+Breadboard Jumper Wires\\
 \end{multicols}
 
 %}}}
@@ -222,7 +222,8 @@ La broche la plus courte de la diode réceptrice est négative, l'autre positive
 \label{FigDiodeFlamme}
 \end{center}
 \end{figure}
-Quand la diode s'approche d'un feu, la valeur de tension que lit le port analogique diffère. Si vous utilisez un multimètre, la tension qu'il lit est d'environ 0,3V quand il n'y a pas d'incendie. Quand il y a un feu, la tension qu'il lit est de l'ordre de 1.0V. Plus le feu est proche, plus la tension est élevée.
+
+Quand la diode s'approche d'un feu, la valeur de tension que lit le port analogique varie. Si vous utilisez un multimètre, la tension qu'il lit est d'environ 0,3V quand il n'y a pas d'incendie. Quand il y a un feu, la tension qu'il lit est de l'ordre de 1.0V. Plus le feu est proche, plus la tension est élevée.
 Donc, au début du programme, vous pouvez initialiser la valeur de tension i (pas de feu). Ensuite, vous lisez en continu la valeur de tension analogique j et obtenez la valeur de différence k = j-i. Comparez k avec 0.6V (123 en binaire) pour déterminer si la diode est proche d'un feu ou non. Si oui, le buzzer va sonner.
 
 \question Réalisez le montage.
@@ -233,10 +234,12 @@ Donc, au début du programme, vous pouvez initialiser la valeur de tension i (pa
 \question Quelle est la valeur de ce potentiel en présence de flamme ?
 \reponse
 
-\question Quelle est sa valeur lorsque la flamme est très proche, au maximum raisonable ?
+\question Quelle est sa valeur lorsque la flamme est très proche (soyons raisonable) ?
 \reponse
 
-\question Répétez les deux question précédent avec une résistance de 5k$\Omega$. Donnez donc trois valeur de tension.
+\question Réprennez les deux questions précédentes avec une résistance de 5k$\Omega$ et répondez-y ci après. Donnez donc trois valeurs de tension.
+\reponse
+\reponse
 \reponse
 
 \question Expliquez le principe à l'origine de ce changement.
@@ -245,10 +248,11 @@ Donc, au début du programme, vous pouvez initialiser la valeur de tension i (pa
 \question Quel est la différence entre un buzzer actif et passif ?
 \reponse
 
-\question Vérifier en le polarisant avec 5V pour vérifier qu'il marche comme voulu ?
-\reponse
+\question Vérifiez le bon fonctionnement du buzzer actif en le polarisant avec 5V.
+\tcbox{\textbf{Constatation professeur :} \hspace{5cm} } % package tcolorbox
 
-\question Implémentez le code ci-dessous et le cablage de la figure \ref{FigDiodeFlamme} :
+
+\question Implémentez le code ci-dessous et le cablage de la figure 1 :
 
 \begin{lstlisting}
 int flame=0;// select analog pin 0 for the sensor
@@ -287,10 +291,11 @@ void loop() {
 \question Convertir ces valeurs en volt et les comparer avec des mesures au multimètre ?
 \reponse
 
+\question Choisir deux valeurs de seuil différentes de la variable \texttt{val} pour détecter deux distances de flamme différentes. Préciser ci dessous les deux valeurs de la variable \texttt{val} et les deux distances observées en centimètres.
+\reponse
+\reponse
 %}}}
 
-\bigskip
-\bigskip
 \bigskip
 
 \partie{Conception \& réalisation avec un buzzer passif} \\                      %{{{1
@@ -299,9 +304,15 @@ void loop() {
 
 \tcbox{\textbf{Constatation professeur :} \hspace{5cm} } % package tcolorbox
 
+\question Expliquez son principe de fonctionnement :
+\reponse
+\reponse
+\reponse
+\reponse
+
 %}}}
 
 \end{document}
-%vim:fdm=marker :fdl=0:wrap
+% vim:fdm=marker :fdl=0:wrap
 
 
