@@ -72,7 +72,7 @@
 \fancyhead[L]{BP SN}
 \fancyhead[C]{arduino}
 \fancyhead[R]{PIR et LCD}
-\fancyfoot[L]{v 1.5 -- JB}
+\fancyfoot[L]{v 1.6 -- JB}
 \fancyfoot[C]{\textbf{gestion de l'habitat: detection intrusion}}
 \fancyfoot[R]{\thepage/\pageref{LastPage}}
 %}}}
@@ -202,9 +202,9 @@ Male to Female Dupont Line
 \newpage
 
 
-\partie{Le capteur PIR : Passive Infrared Sensor} \\                      %{{{1
+\partie{Le capteur PIR : Passive Infrared Sensor\footnote{Capteur infrarouge passif}} \\                      %{{{1
 
-Le capteur de mouvement infrarouge pyroélectrique peut détecter les signaux infrarouges d'une personne en mouvement ou d'un animal en mouvement, et émettre des signaux de commutation. Il peut être appliqué à une variété d'occasions pour détecter le mouvement du corps humain. Les capteurs infrarouges pyroélectriques conventionnels nécessitent un détecteur infrarouge pyroélectrique, une puce professionnelle, un circuit périphérique complexe, donc la taille est plus grande, avec un circuit complexe, et une fiabilité inférieure. Nous utilisons ici un nouveau capteur de mouvement infrarouge pyroélectrique, spécialement conçu pour Arduino. Il utilise un capteur infrarouge pyroélectrique à corps numérique intégré, a une taille plus petite, une plus grande fiabilité, une consommation d'énergie inférieure et un circuit périphérique plus simple.
+Le capteur de mouvement infrarouge pyroélectrique peut détecter les signaux infrarouges d'une personne en mouvement ou d'un animal en mouvement, et émettre des signaux de commutation. Il peut être appliqué à une variété d'occasions pour détecter le mouvement du corps humain. Les capteurs infrarouges pyroélectriques conventionnels nécessitent un détecteur infrarouge pyroélectrique, une puce professionnelle, un circuit périphérique complexe ; ces capteurs conventionnels sont d'une grande taille avec un circuit complexe et une fiabilité inférieure. Nous utilisons ici un nouveau capteur de mouvement infrarouge pyroélectrique spécialement conçu pour Arduino. Il utilise un capteur infrarouge pyroélectrique à corps numérique intégré, a une taille plus petite, une fiabilité plus grande, une consommation d'énergie inférieure et un circuit périphérique plus simple.
 
 \begin{minipage}{.5\textwidth} %
 \textbf{Spécifications}\\
@@ -233,14 +233,17 @@ Weight: 4g \\
 \end{center}
 \end{figure}
 
-\question Quel est est la tension d'alimentation ?
+\question Quel est la tension d'alimentation ?
 \reponse
 
 \question Quel est est la consommation ?
 \reponse
 
-\question Quelle sont les valeurs de sortie quand quelque chose est détecté et sinon ?
+\question Quelle sont les valeurs de sortie quand quelque chose est détecté ? Sinon ?
 \reponse
+
+\question Alimentez le capteur PIR et vérifier son bon fonctionnement à l'aide d'un voltmètre.
+\tcbox{\textbf{Constatation professeur :} \hspace{5cm} } % package tcolorbox
 
 \question Pour la sortie à haut potentiel, quel sera le courant débité lorsque la sortie de la carte est directement branchée à une GPIO de la carte arduino ? \footnote{https://www.arduino.cc/en/Tutorial/DigitalPins}
 \reponse
@@ -272,7 +275,8 @@ Weight: 4g \\
 \end{figure}
 
 
-\question Implémentez le montage de la figure \ref{montagePIR} et le code source suivante :
+\question Implémentez le montage de la figure \ref{montagePIR} et le code source suivant :
+\tcbox{\textbf{Constatation professeur :} \hspace{5cm} } % package tcolorbox
 \begin{lstlisting}
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
@@ -309,14 +313,13 @@ void loop() {
 }
 \end{lstlisting}
 
-\tcbox{\textbf{Constatation professeur :} \hspace{5cm} } % package tcolorbox
 
-\question Quel le type des variables sensorPin et indicator ?
+\question Quel est le type des variables sensorPin et indicator ?
 \reponse
 
 \question Combien de fils connectent l'écran LCD ?
 \reponse
-\question Quels sont leur nom ?
+\question Quels sont leurs noms ?
 \reponse
 \question Pourrait-on connecter d'autres composants ?
 \reponse
@@ -330,7 +333,7 @@ void loop() {
 \reponse
 \question A quoi servent-elles ?
 \reponse
-\question Comment le preprocessur gère t'il la commande \texttt{\#include} ? \footnote{https://fr.wikibooks.org/wiki/Programmation\_C/Préprocesseur\#Inclusion\_de\_fichiers}
+\question Comment le préprocessur gère t'il la commande \texttt{\#include} ? \footnote{https://fr.wikibooks.org/wiki/Programmation\_C/Préprocesseur\#Inclusion\_de\_fichiers}
 \reponse
 
 \question Quel est le type de la variable lcd ? \footnote{https://fr.wikipedia.org/wiki/Programmation\_orientée\_objet}
