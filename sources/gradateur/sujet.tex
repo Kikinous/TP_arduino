@@ -50,35 +50,35 @@
 \definecolor{deepred}{rgb}{0.6,0,0}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 \lstset{%
-%       backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
-        basicstyle=\footnotesize,        % the size of the fonts that are used for the code
-%       breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-%       breaklines=true,                 % sets automatic line breaking
-%       captionpos=b,                    % sets the caption-position to bottom
-        commentstyle=\color{mygreen},    % comment style
-%       deletekeywords={type},           % if you want to delete keywords from the given language
-%       emph={},                         % Custom highlighting
-%       emphstyle=\ttb\color{deepred}    % Custom highlighting style
-%       escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-%       extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-        frame=shadowbox,                 % adds a frame around the code {single, shadowbox}
-%       keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-        keywordstyle=\color{blue},       % keyword style
-	language=C,                      % the language of the code {Python, C}
-%       morekeywords={*,...},            % if you want to add more keywords to the set
-        numbers=left,                    % numbers = (none, left, right)
-%       numbersep=5pt,                   % how far the line-numbers are from the code
-%       numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
-%       otherkeywords={self},            % Add keywords here
-%       rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-	rulesepcolor=\color{gray}        % shadowbox color
-%       showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-%       showstringspaces=false,          % underline spaces within strings only
-%       showtabs=false,                  % show tabs within strings adding particular underscores
-%       stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
-%       stringstyle=\color{mymauve},     % string literal style
-%       tabsize=4,                       % sets default tabsize to 2 spaces
-%       title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+% backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+% breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+% breaklines=true,                 % sets automatic line breaking
+% captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+% deletekeywords={type},           % if you want to delete keywords from the given language
+% emph={},                         % Custom highlighting
+% emphstyle=\ttb\color{deepred}    % Custom highlighting style
+% escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+% extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=shadowbox,                 % adds a frame around the code {single, shadowbox}
+% keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C,                      % the language of the code {Python, C}
+% morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % numbers = (none, left, right)
+% numbersep=5pt,                   % how far the line-numbers are from the code
+% numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+% otherkeywords={self},            % Add keywords here
+% rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  rulesepcolor=\color{gray}        % shadowbox color
+% showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+% showstringspaces=false,          % underline spaces within strings only
+% showtabs=false,                  % show tabs within strings adding particular underscores
+% stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+% stringstyle=\color{mymauve},     % string literal style
+% tabsize=4,                       % sets default tabsize to 2 spaces
+% title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 %}}}
 %}}}
@@ -181,7 +181,9 @@
 \objectif{Gradateur et synthèse de couleur}\\ %{{{1
 
 \begin{minipage}{0.46\textwidth}
-Un gradateur est un appareil électrique destiné à faire varier la puissance délivrée à un autre appareil utile, souvent un éclairage (projecteurs de scène, par exemple). C'est donc un dispositif de l'électronique de puissance, qui fonctionne en faisant varier la tension et l'intensité de sortie, ce qui modifie ainsi la puissance dans l'appareil utile, nommé la charge. En fait, le gradateur diminue la puissance délivrée à la charge, en comparaison d'un circuit sans gradateur. Ce dispositif est utilisé sur des tensions alternatives (souvent sinusoïdales) : c'est un convertisseur direct alternatif-alternatif. \\
+Un gradateur est un système électrique destiné à faire varier la puissance délivrée à un appareil, souvent un éclairage (projecteurs de scène, par exemple). C'est donc un dispositif d'électronique de puissance qui fonctionne en faisant varier la tension et le courant de sortie. Ainsi, il modifie la puissance utile appliqué à l'appareil qu'il alimente. En électronique de puissance, on nomme l'appareil qui reçoit la puissance électrique la charge.
+
+Un particularité du gradateur est de diminuer la puissance délivrée à la charge en comparaison d'un circuit sans gradateur. Dans les situtions réelles, ce dispositif est utilisé sur des tensions alternatives (souvent sinusoïdales) : c'est un convertisseur direct alternatif-alternatif. Ceci étant précisé, dans le cadre de ce sujet, le gradateur étudié fonctionne en courant continu.\\
 \end{minipage}\hfill
 \begin{minipage}{0.46\textwidth}
 \begin{center}
@@ -205,7 +207,7 @@ Dans ce TP, nous allons mixer toutes les couleurs d'une LED RGB.
 \question Quelles sont les trois couleurs des trois types de cônes de la rétine humaine ?
 \reponse
 
-\question Pour que l'oeuil humain voit la couleur blanche, quels cônes faut'il excitee ?
+\question Pour que l'oeuil humain voit la couleur blanche, quels cônes faut'il exciter ?
 \reponse
 
 \question Pour que l'oeuil humain voit la couleur jaune, quels cônes faut'il exciter ?
@@ -222,13 +224,15 @@ Dans ce TP, nous allons mixer toutes les couleurs d'une LED RGB.
 \bigskip
 
 \partie{Principe du gradateur}\\ %{{{1
-PWM, abréviation de Pulse Width Modulation, est une technique utilisée pour coder le niveau du signal analogique en signaux numériques. Un ordinateur ne peut pas fournir de tension analogique, mais seulement des valeurs de tension numériques telles que 0V ou 5V. Nous utilisons donc un compteur à haute résolution pour coder un niveau de signal analogique spécifique en modulant le cycle de service de PMW. Le signal PWM est également numérisé car, à tout moment, l'alimentation CC est entièrement 5 V (ON) ou 0 V (OFF). La tension ou le courant est transmis à la charge analogique (l'appareil qui utilise la puissance) par une séquence d'impulsions répétées étant ON ou OFF. En étant ON, le courant est alimenté à la charge. En étant OFF, ce n'est pas le cas. Avec une bande passante adéquate, toute valeur analogique peut être encodée en utilisant PWM.
+La PWM, abréviation de Pulse Width Modulation\footnote{modulation de la largeur d'impulsion}, est une technique utilisée pour coder le niveau du signal analogique en signaux numériques. Un ordinateur ne peut pas fournir de tension analogique : il ne peut seulement fournir des valeurs de tensions numériques telles que 0V ou 5V (et aucune autres valeurs).
+
+Pour pour coder un niveau de signal analogique précis, le principe consiste à moduler le rapport cyclique des impulsions PMW.
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=.49\textwidth]{PWM_lampes}\hfill
 \includegraphics[width=.49\textwidth]{PWM_keywords}\\
-\caption{Principe géréral la modulation de largeur d'impulsion, ou Pulse Wave Modulation.}
+\caption{Principe géréral la modulation de largeur d'impulsion, ou Pulse Wave Modulation. La largeur de l'impulsion est simplement la largeur du créneau sur la figure, elle est exprimé en seconde. Le rapport cyclique est lui sans unité et varie entre 0 et 1. Il représente la fraction de temps où la tension est à sa valeur haute. Si le signal est la moitié du temps à la valeur haute, le rapport cyclique vaut 0,5. S'il est tout le temps haut, il vaut 1. Il vaut 0 s'il est tout le temps bas.}
 \label{PWM}
 \end{center}
 \end{figure}
@@ -271,7 +275,7 @@ V_{OUT}= \frac{T_{ON}}{T_{cycle}} \cdot V_{IN}
 \question Retrouver l'application numérique qui a permis de calculer que la tension de sortie valait 2,5 Volt dans le deuxième cas de figure.
 \reponse
 
-\question Retrouver par l'application numérique qui a permis de calculer que la tension de sortie valait 1 Volt dans le troisième cas de figure
+\question Retrouver l'application numérique qui a permis de calculer que la tension de sortie valait 1 Volt dans le troisième cas de figure
 \reponse
 
 \question Le microcontrolleur de la carte arduino UNO permet de générer 6 PWM. Sur quelles broches de la carte sont elles branchées ?
@@ -342,7 +346,8 @@ void loop() {
 \reponse
 \reponse
 
-\question Ouvrez le terminal série de l'environnement arduino et observez la valeur \texttt{val} évoluer alors que vous changez le potentiomètre. Prennez un multimètre et vérifier que la valeur mesurée codée sur 8bits correspond à la valeur mesurée avec un volmètre pour deux ou trois valeurs. Précisez le calcul de la conversion analogique numérique dans les lignes ci-dessous pour les trois réglages du potentiomètres arbitrairement choisis.
+\question Ouvrez le terminal série de l'environnement arduino et observez la valeur \texttt{val} évoluer alors que vous faites varier le potentiomètre. Prennez un multimètre et vérifier que la valeur mesurée codée sur 8 bits correspond à la valeur mesurée avec un volmètre (pour deux ou trois valeurs). Précisez le calcul de la conversion analogique numérique dans les lignes ci-dessous pour deux réglages différents du potentiomètre.
+\reponse
 \reponse
 \reponse
 \reponse
@@ -352,19 +357,19 @@ void loop() {
 
 \partie{Trois gradateurs pour 3 couleurs} \\ %{{{1
 
-\question Réaliser le circuit suivant de la figure \ref{MontageTroisCouleurs}. \\
+\question Réaliser le circuit la figure \ref{MontageTroisCouleurs}. \\
 
 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[height=\textwidth,angle=270]{montage_3couleurs}\\
-\caption{Montage à réaliser pour cabler les trois couleurs}
+\caption{Montage à réaliser pour varier la couleur émise d'une LED RGB.}
 \label{MontageTroisCouleurs}
 \end{center}
 \end{figure}
 
 
-\question Implémenter le code suivant et tester le résultat. Une meilleure apréciation de la couleur est obtenue en mettant une feuille de papier blanc juste au dessus de la LED.  \\
+\question Implémenter le code suivant et tester le montage. Une meilleure apréciation de la couleur est obtenue en mettant une feuille de papier blanc juste au dessus de la LED.  \\
 \begin{lstlisting}
 int redpin = 11;
 int greenpin =10;
@@ -434,7 +439,7 @@ void loop() {
 \question Plutot que d'avoir du mal avec les potentiomètres pour avoir exactement la couleur désirée, que pouvez-vous plutôt faire ?
 \reponse
 
-\question Faites-le et recopiez ce que vous avez fait ci-dessous (surtout le code source) :
+\question Implémentez l'idée décrite ci-dessous et écrivez ci-dessous les lignes du code source que vous avez ajouté :
 \reponse
 \reponse
 \reponse
@@ -447,5 +452,5 @@ void loop() {
 
 \end{document}
 
-% vim:fdl=0:set wrap
+% vim:fdl=0 : wrap
 
