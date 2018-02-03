@@ -76,7 +76,7 @@
 \fancyhead[L]{BP SN}
 \fancyhead[C]{arduino}
 \fancyhead[R]{RFID}
-\fancyfoot[L]{v 1.5 -- JB}
+\fancyfoot[L]{v 1.6 -- JB}
 \fancyfoot[C]{gestion de l'habitat | gestion de l'accès }
 \fancyfoot[R]{\thepage/\pageref{LastPage}}
 %\lhead{3E}%haut de page gauche
@@ -183,9 +183,9 @@
 \objectif{Support d'identification, lecteurs, unités de traitement, gestion de communication}\\
 
 
-L'utilisation MF RC522 met en oeuvre la modulation et la démodulation à 13.56MHz. Elles sont complètement intégrées avec toutes sortes de méthodes de communication sans contact et de protocoles. La partie numérique gère les cadres ISO14443A et la détection d'erreur, l'algorithme de cryptage Quick CRYPTO1, et le terme de vérification série MIFARE.
+L'utilisation MF RC522 met en oeuvre la modulation et la démodulation d'une onde radio ayant une fréquence de 13.56MHz. Ces deux techniques sont complètement intégrées avec des méthodes de communication sans contact. La partie numérique gère les techniques ISO14443A, la détection d'erreur, l'algorithme de cryptage Quick CRYPTO1, et le terme de vérification série MIFARE.
 
-Le module MFRC522 prend en charge le protocole  de communications sans contact à haute vitesse MIFARE, avec des taux de transfert de données bidirectionnels jusqu'à 424 kbit/s. Le module MF522 utilise un composant d'origine Philips MFRC522 lecteur de carte de circuit. Il est facile à utiliser, faible coût, adapté au développement de l'équipement. Il prend en compte la nécessité de conception de terminal RF / utilisateurs de production. Ce module peut être directement chargé dans la multitude de forme de lecteur. Le module utilise une tension de 3.3V. Avec seulement quelques lignes simples à travers l'interface SPI, tout utilisateur connecte directement le CPU au module de communication, et peut de plus garantir un travail stable et fiable, distance du lecteur.\\
+Le module MFRC522 prend en charge le protocole  de communications sans contact à haute vitesse MIFARE, avec des taux de transfert de données bidirectionnels jusqu'à 424 kbit/s. Le module MF522 utilise un composant d'origine Philips MFRC522 comme lecteur. Il est facile à utiliser, faible coût et adapté au développement de syst§mes. Ce module peut être directement adapté à une multitude de lecteurs de différentes formes. Le module utilise une tension de 3.3V. Avec seulement quelques lignes de code simples qui programment l'interface SPI, tout utilisateur connecte directement le CPU au module de communication. Cela offre en outre un travail stable et fiable, quel que soit la distance entre le lecteur et le tag RFID.\\
 
 \partie{Materiel} \\                      %{{{1
 \begin{minipage}{.4\textwidth} %
@@ -209,17 +209,15 @@ tag RFID et son lecteurs
 
 \partie{Lire le tag}\\ %{{{1
 
-\question Est-ce que le dispositif comporte une source d'énergie comme une pile ?
+\question Est-ce que le tag RFID comporte une source d'énergie comme une pile ?
 \reponse
 
-\question Quelle est alors l'origine de l'énergie faisant marcher les composants sur le tag ?
+\question Quelle est alors l'origine de l'énergie faisant marcher les composants sur le tag RFID ?
 \reponse
 
-\question A quel composant d'électronique de puissance vous fait penser cette gestion de l'énergie ?
+\question A quel composant d'électronique de puissance vous fait penser ce transfert d'énergie entre le lecteur et le tag RFID ?
 \reponse
 
-\question Une fois que votre montage marchera, tester la distance maximale à laquelle la communication fonctionne ?
-\reponse
 
 \question Installer la librairie du RC522 (voir figure \ref{FigBibliotheque} ) et la tester.
 \begin{figure}[p]
@@ -231,7 +229,7 @@ tag RFID et son lecteurs
 \end{center}
 \end{figure}
 
-\question Branchement\\
+\question Réaliser le cablage entre le lecteur et la carte du microcontrolleur.\\
 
 \begin{figure}[!h]
 \begin{center}
@@ -241,17 +239,17 @@ tag RFID et son lecteurs
 \end{center}
 \end{figure}
 
-\question Quel est le bus qui relie le arduino et le lecteur de tag RFID ?
+\question Quel est le type du bus qui relie le microcontrolleur arduino et le lecteur de tag RFID ?
 \reponse
 
-\question Decrire le role de chaque fil ?
+\question Decrire la fonction de chaque fil ?
 \reponse
 \reponse
 \reponse
 
 
 
-\question Implémentez le code suivant : \footnote{http://makecourse.weebly.com/week10segment1.html}
+\question Implémentez le code suivant : \footnote{http://makecourse.weebly.com/week10segment1.html}. Les commentaires aident à comprendre le code. Il n'est pas nécessaire de les implémenter puisque nous les avons sur le sujet. Habituellement, la documentation du code est très importante.
 
 
 \begin{lstlisting}
@@ -316,16 +314,57 @@ void loop() {
 \end{lstlisting}
 
 
-
-\question Lecture de la carte
+\question Montrer que la lecture de la carte marche
 
 \tcbox{\textbf{Constatation professeur :} \hspace{5cm} } % package tcolorbox
 
+\question A quoi sert l'instruction \texttt{\#include} ?
+\reponse
+
+\question A quoi sert l'instruction \texttt{\#define} ?
+\reponse
+
+\question Quel est le type de la variable mfrc522 ?
+\reponse
+
+\question Quel est le type de la variable Serial ?
+\reponse
+
+\question Quel est le type de la variable SPI ?
+\reponse
+
+\question Quelles méthodes de l'objet mfrc522 sont utilisées dans ce code ?
+\reponse
+\reponse
+\reponse
+\reponse
+
 %}}}
 
-\partie{Lire le tag}\\ %{{{1
+\partie{Ecrire et lire le tag}\\ %{{{1
 
-\question Ecrire le tag avec des données de votre choix
+\question Dans le code source suivant, quelle nouvelle variable globale a t'il été crée ?
+\reponse
+
+\question Est-ce que la déclaration des connections a changé ?
+\reponse
+
+\question Quel est le type de la variable  block ? Combien d'octets occupe t'elle en mémoire ? Combien de bits ?
+\reponse
+
+\question Quel est le type de la variable blockcontent ? Combien d'octets occupe t'elle en mémoire ? Combien de bits ?
+\reponse
+
+\question Quel est le type de la variable readbackblock ? Combien d'octets occupe t'elle en mémoire ? Combien de bits ?
+\reponse
+
+\question A la ligne 111, la boucle \texttt{for} va jusqu'à 16. Pourquoi ?
+\reponse
+
+\question Que fait l'instruction à la ligne 113 ?
+\reponse
+
+\question Implémentez le code suivant et faites marcher l'écriture-lecture du tag.
 \begin{lstlisting}
 
 /******************************************
@@ -424,7 +463,7 @@ void loop()
   //mfrc522.PICC_DumpToSerial(&(mfrc522.uid));
 
   //The 'PICC_DumpToSerial' method 'dumps' the entire MIFARE data block into the serial monitor.
-  \\Very useful while programming a sketch with the RFID reader...
+  //Very useful while programming a sketch with the RFID reader...
   //Notes:
   //(1) MIFARE cards conceal key A in all trailer blocks, and shows 0x00 instead of 0xFF.
   //    This is a secutiry feature. Key B appears to be public by default.
